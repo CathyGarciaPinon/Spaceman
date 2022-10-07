@@ -17,3 +17,5 @@ let bored; //each reindeer will disapear after each wrong answer
   /*----- functions -----*/
   initialize();
 
+
+
