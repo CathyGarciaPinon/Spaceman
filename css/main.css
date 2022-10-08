@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Mountains of Christmas', cursive;
-    background-image: url("https://thumbs.gfycat.com/SimplisticRaggedBronco-max-1mb.gif;");
+   
   }
 
 body {
@@ -14,6 +14,21 @@ h1 {
     font-size: 10vmin;
     color: rgb(183,55,52);
 }
+
+.snow {
+    /* min-height: 100vh; */
+    opacity: 0.45;
+    -moz-opacity:0.45;
+    filter: alpha(opacity=45);
+    width: 950px;
+    background-attachment: fixed;
+    background-image: url("https://www.rpnation.com/gallery/falling-snow-gif-transparent-background.26847/full");
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: 100%;
+    backface-visibility: transparent; */
+}   
+
 
 .picture {
     display: flex;
