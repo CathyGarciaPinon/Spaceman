@@ -15,9 +15,15 @@ h1 {
     color: rgb(183,55,52);
 }
 
+.attempts {
+    margin-top: 40vim;
+    font-size: 3vmin;
+    color: rgb(253,231,127);
+}
+
 h2 {
     text-align: center;
-    font-size: 10vmin;
+    font-size: 4vmin;
     color: rgb(183,55,52);
 }
 
