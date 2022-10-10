@@ -1,13 +1,14 @@
   /*----- constants -----*/
-const wordsList = ['DASHER',
-                'DANCER',
-                'PRANCER',
-                'VIXEN',
-                'COMET',
-                'CUPID',
-                'DONNER',
-                'BLITZEN',
-                'RUDOLPH',
+const wordsList = [
+  'DASHER',
+  'DANCER',
+  'PRANCER',
+  'VIXEN',
+  'COMET',
+  'CUPID',
+  'DONNER',
+  'BLITZEN',
+  'RUDOLPH',
 ]; //word library
 
 const maxWrong = 6;
@@ -19,26 +20,27 @@ const maxWrong = 6;
 let randomWord; 
 let answer;
 let wrongGuesses;
+let playerGuess;
 
 
   /*----- stored/ cached elements  -----*/
-// const attemptsEl = document.getElementsById('attempts');
-// const playerGuess = document.getElementById('playerGuess');
-// const message = document.querySelector('h3');
-// const resetPlayAgainBtn = document.querySelector('button');
-
+const attemptsEl = document.getElementsById('attempts');
+const playerGuess = document.getElementById('playerGuess');
+const board = document.querySelectorAll('button');
+const message = document.querySelector('h3');
+console.log(keys[0.innerText])
 
   /*----- event listeners -----*/
-resetPlayAgainBtn.addEventListener('click', initialize);
+// resetPlayAgainBtn.addEventListener('click', initialize);
 
 
 
   /*----- functions -----*/
-initialize();
+// initialize();
 
-function initialize() {
-    const wordList 
-}
+// function initialize() {
+//     const wordList 
+// }
 
  
 
