@@ -1,32 +1,50 @@
   /*----- constants -----*/
-const wordList = ['DASHER', 'DANCER', 'PRANCER', 'VIXEN', 'COMET', 'CUPID', 'DONNER', 'BLITZEN', 'RUDOLPH']; //word library
-const AUDIO = new Audio('')
+const wordsList = ['DASHER',
+                'DANCER',
+                'PRANCER',
+                'VIXEN',
+                'COMET',
+                'CUPID',
+                'DONNER',
+                'BLITZEN',
+                'RUDOLPH',
+]; //word library
+
+const maxWrong = 6;
+
+
+// const AUDIO = new Audio('')
 
   /*----- state variables -----*/
-let attempts; // the remaining attempts left out of 6
-let bored; //each reindeer will disapear after each wrong answer
-let letterInput; //Chosen letter by player
+let randomWord; 
+let answer;
+let wrongGuesses;
 
 
-  /*----- cached elements  -----*/
+  /*----- stored/ cached elements  -----*/
+// const attemptsEl = document.getElementsById('attempts');
+// const playerGuess = document.getElementById('playerGuess');
+// const message = document.querySelector('h3');
+// const resetPlayAgainBtn = document.querySelector('button');
 
 
   /*----- event listeners -----*/
+resetPlayAgainBtn.addEventListener('click', initialize);
+
 
 
   /*----- functions -----*/
-  init();
+initialize();
 
-
-  function init() {
-
-
-  }
-
-function getRandomWord() {
-  const rndoWord = Math.floor(Math.random() * wordList.lenth);
-  return wordList[rndoWord];
+function initialize() {
+    const wordList 
 }
 
+ 
 
 
+
+
+  // function renderMessage () {
+  //   if ()
+  // }
