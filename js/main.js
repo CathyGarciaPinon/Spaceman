@@ -23,11 +23,11 @@ let guess; //current guessed letters
 let gameStatus; //Null(game in progress), W (win), L (lose)
 
   /*----- stored/ cached elements  -----*/
-const msgEl = document.getElementsByClassName('message');
+const msgEl = document.querySelector('.message');
 const playBtn = document.getElementById('play');
-const livesLeft = document.getElementsByClassName('attempts');
+const livesLeft = document.querySelector('.attempts');
 const letterBtn = [...document.querySelectorAll('article > button')]
-const secretEl = document.getElementsByClassName('secretWord');
+const secretEl = document.querySelector('.secretWord');
 
 
 
