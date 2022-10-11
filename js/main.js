@@ -13,6 +13,8 @@ const wordsList = [
 
 const maxWrong = 6; 
 
+let IMAGES
+
 
 // const AUDIO = new Audio('')
 
@@ -81,12 +83,12 @@ function renderBtn() {
   playBtn.style.visibility = gameStatus ? 'visible' : 'hidden';
 }
 
-function handleChoice(event) {
+function handleChoice(event) { // this function is the letter choice the player picks
   const ltr = event.target.textContent
   console.log(ltr)
   if (
-    gameStatus ||
-    !letterBtn.includes(event.target) ||
+    gameStatus || 
+    !letterBtn.includes(event.target) || //this IF statement is if the incorrect button is is chosen
     wrongGuesses.includes(ltr) ||
     guess.includes(ltr)  
   ) return;
