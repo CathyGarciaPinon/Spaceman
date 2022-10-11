@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Mountains of Christmas', cursive;
-    /* border: 1px solid #ff0000 */
+    border: 1px solid #ff0000
   }
 
 body {
@@ -30,13 +30,19 @@ h2 {
     color: rgb(183,55,52);
 }
 
-.attempts {
+h3 {
+    text-align: center;
+    font-size: 3vmin;
+    color: rgb(253,231,127);
+}
+
+/* .attempts {
     display: flex;
     justify-content: flex-end;
     margin-top: 40vim;
     font-size: 3vmin;
     color: rgb(253,231,127);
-}
+} */
 
 
 div {

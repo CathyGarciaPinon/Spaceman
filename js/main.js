@@ -11,7 +11,7 @@ const wordsList = [
   'RUDOLPH',
 ]; //word library
 
-const maxWrong = 6;
+const maxWrong = 6; 
 
 
 // const AUDIO = new Audio('')
@@ -23,18 +23,19 @@ let guess; //current guessed letters
 let gameStatus; //Null(game in progress), W (win), L (lose)
 
 
+
   /*----- stored/ cached elements  -----*/
-const msgEl = document.querySelector('.message');
-const playBtn = document.getElementById('play');
-const livesLeft = document.querySelector('.attempts');
-const letterBtn = [...document.querySelectorAll('article > button')]
-const secretEl = document.querySelector('.secretWord');
+const msgEl = document.querySelector('.message'); //Message that appears if they win or lose
+const playBtn = document.getElementById('play'); //The play button
+const livesLeft = document.querySelector('.attempts'); // How many guesses are left
+const letterBtn = [...document.querySelectorAll('article > button')] //My alphabet buttons
+const secretEl = document.querySelector('.secretWord'); //the secret word section with lines
 
 
 
   /*----- event listeners -----*/
-playBtn.addEventListener('click', initialize);
-document.querySelector('article').addEventListener('click', handleChoice);
+playBtn.addEventListener('click', initialize); //The play button will generate a new random word
+document.querySelector('article').addEventListener('click', handleChoice); 
 
 
   /*----- functions -----*/
@@ -58,11 +59,11 @@ function render() {
 
 function renderMessage() {
   if (gameStatus === 'W') {
-      msgEl.textContent = `Yay, you did it!`;
+      msgEl.textContent = `Yay, you did it! Santa is on his way bacl to the North Pole!`;
   } else if (gameStatus === 'L') {
-      msgEl.textContent = `Oh no, the word is ${randomWord.join('')}`;
+      msgEl.textContent = `Oh no, the word is ${randomWord.join('')} keep trying.  Mrs. Clause is still waiting!`;
   } else {
-      msgEl.textContent = `${maxWrong - wrongGuesses.length + 1} Wrong guesses remain, Good luck!`
+      msgEl.textContent = `${maxWrong - wrongGuesses.length + 1} Wrong guesses remain, try again!`
   }
 }
 function renderBtn() {
