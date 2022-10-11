@@ -87,6 +87,12 @@ button:hover {
     color: rgb(183,55,52);
 }
 
+.correct {
+    background-color: green;
+}
 
+.wrong {
+    background-color: red;
+}
 
 
