@@ -13,8 +13,15 @@ const wordsList = [
 
 const maxWrong = 6; 
 
-let IMAGES
-
+const IMAGES = [
+ "img/reindeer sleigh/SANTA AND REINDEER - 0.png",
+ "img/reindeer sleigh/SANTA AND REINDEER - 1.png",
+ "img/reindeer sleigh/SANTA AND REINDEER - 2.png",
+ "img/reindeer sleigh/SANTA AND REINDEER - 3.png",
+ "img/reindeer sleigh/SANTA AND REINDEER - 4.png",
+ "img/reindeer sleigh/SANTA AND REINDEER - 5.png",
+ "img/reindeer sleigh/SANTA AND REINDEER - 6.png",
+];
 
 // const AUDIO = new Audio('')
 
@@ -27,6 +34,7 @@ let gameStatus; //Null(game in progress), W (win), L (lose)
 
 
   /*----- stored/ cached elements  -----*/
+const imageEl = document.querySelector('img');
 const msgEl = document.querySelector('.message'); //Message that appears if they win or lose
 const playBtn = document.getElementById('play'); //The play button
 const livesLeft = document.querySelector('.attempts'); // How many guesses are left
@@ -54,7 +62,7 @@ function initialize() {
 
 function render() {
   renderMessage()
-  // imageEl.src = `${IMAGES[wrongGuesses.length]}`;
+  imageEl.src = `${IMAGES[wrongGuesses.length]}`;
   secretEl.textContent = guess.join('')
   renderBtn()
 }
