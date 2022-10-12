@@ -98,7 +98,7 @@ function handleChoice(event) { // this function is the letter choice the player 
     gameStatus || 
     !letterBtn.includes(event.target) || //this IF statement is if the incorrect button is is chosen
     wrongGuesses.includes(ltr) ||
-    guess.includes(ltr)  
+    guess.includes(ltr) 
   ) return;
 
   if (randomWord.includes(ltr)) {
@@ -117,7 +117,7 @@ function handleChoice(event) { // this function is the letter choice the player 
 function getGameStatus() {
   if (!guess.includes('_')) return 'W';
   //if wrong guesses.length is > maxWrongGuesses return 'L'
-  if (wrongGuesses.length > maxWrong) return 'L';
+  if (wrongGuesses.length === maxWrong) return 'L';
   return null;
 }
  
