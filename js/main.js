@@ -120,4 +120,14 @@ function getGameStatus() {
   if (wrongGuesses.length === maxWrong) return 'L';
   return null;
 }
+
+function renderAudio() {
+  if (audio === 'on') {
+      soundEl.innerHTML = '';
+      music.play();
+  } else if (audio === 'off'){
+      soundEl.innerHTML = '';
+      music.pause();
+  }
+}
  
