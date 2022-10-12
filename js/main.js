@@ -65,7 +65,7 @@ function renderMessage() {
   } else if (gameStatus === 'L') {
       msgEl.textContent = `Oh no, the word is ${randomWord.join('')} keep trying.  Mrs. Clause is still waiting!`;
   } else {
-      msgEl.textContent = `${maxWrong - wrongGuesses.length + 1} Wrong guesses remain, try again!`
+      msgEl.textContent = `${maxWrong - wrongGuesses.length} Wrong guesses remain, try again!`
   }
 }
 function renderBtn() {
