@@ -61,7 +61,7 @@ function render() {
 
 function renderMessage() {
   if (gameStatus === 'W') {
-      msgEl.textContent = `Yay, you did it! Santa is on his way bacl to the North Pole!`;
+      msgEl.textContent = `Yay, you did it! Santa is on his way back to the North Pole!`;
   } else if (gameStatus === 'L') {
       msgEl.textContent = `Oh no, the word is ${randomWord.join('')} keep trying.  Mrs. Clause is still waiting!`;
   } else {
