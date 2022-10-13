@@ -14,13 +14,13 @@ const wordsList = [
 const maxWrong = 6; 
 
 const IMAGES = [
- "img/reindeer sleigh/SANTA AND REINDEER - 0.png",
- "img/reindeer sleigh/SANTA AND REINDEER - 1.png",
- "img/reindeer sleigh/SANTA AND REINDEER - 2.png",
- "img/reindeer sleigh/SANTA AND REINDEER - 3.png",
- "img/reindeer sleigh/SANTA AND REINDEER - 4.png",
- "img/reindeer sleigh/SANTA AND REINDEER - 5.png",
- "img/reindeer sleigh/SANTA AND REINDEER - 6.png",
+ "img/reindeersleigh/SANTAANDREINDEER-0.png",
+ "img/reindeersleigh/SANTAANDREINDEER-1.png",
+ "img/reindeersleigh/SANTAANDREINDEER-2.png",
+ "img/reindeersleigh/SANTAANDREINDEER-3.png",
+ "img/reindeersleigh/SANTAANDREINDEER-4.png",
+ "img/reindeersleigh/SANTAANDREINDEER-5.png",
+ "img/reindeersleigh/SANTAANDREINDEER-6.png",
 ];
 
 // const AUDIO = new Audio('')
