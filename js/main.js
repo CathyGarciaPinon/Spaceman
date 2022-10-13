@@ -34,7 +34,7 @@ let gameStatus; //Null(game in progress), W (win), L (lose)
 
 
   /*----- stored/ cached elements  -----*/
-const imageEl = document.querySelector('img');
+const imageEl = document.querySelector('img'); //Images of reindeer disappearing.
 const msgEl = document.querySelector('.message'); //Message that appears if they win or lose
 const playBtn = document.getElementById('play'); //The play button
 const livesLeft = document.querySelector('.attempts'); // How many guesses are left
@@ -51,7 +51,7 @@ document.querySelector('article').addEventListener('click', handleChoice);
   /*----- functions -----*/
 initialize();
 
-function initialize() {
+function initialize() { //
     wrongGuesses = [];
     const randomIdx = Math.floor(Math.random() * wordsList.length);
     randomWord = wordsList[randomIdx].split('');
@@ -62,7 +62,7 @@ function initialize() {
 
 function render() {
   renderMessage()
-  imageEl.src = `${IMAGES[wrongGuesses.length]}`;
+  imageEl.src = `${IMAGES[wrongGuesses.length]}`; //Each time a wrong guess is made one Reindeer falls off.  This function refers to each image. 
   secretEl.textContent = guess.join('')
   renderBtn()
 }
@@ -93,7 +93,6 @@ function renderBtn() {
 
 function handleChoice(event) { // this function is the letter choice the player picks
   const ltr = event.target.textContent
-  console.log(ltr)
   if (
     gameStatus || 
     !letterBtn.includes(event.target) || //this IF statement is if the incorrect button is is chosen
@@ -101,8 +100,7 @@ function handleChoice(event) { // this function is the letter choice the player 
     guess.includes(ltr) 
   ) return;
 
-  if (randomWord.includes(ltr)) {
-    //correct guess
+  if (randomWord.includes(ltr)) { //correct guess
     randomWord.forEach(function(char,idx) {
       if (char === ltr) guess[idx] = ltr 
     });
