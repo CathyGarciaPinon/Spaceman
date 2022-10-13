@@ -51,23 +51,23 @@ document.querySelector('article').addEventListener('click', handleChoice);
   /*----- functions -----*/
 initialize();
 
-function initialize() { //
+function initialize() { 
     wrongGuesses = [];
-    const randomIdx = Math.floor(Math.random() * wordsList.length);
-    randomWord = wordsList[randomIdx].split('');
-    guess = randomWord.map(ltr => ltr === ' ' ? ' ' : '_');
+    const randomIdx = Math.floor(Math.random() * wordsList.length); //A new word is generated from the wordsList.
+    randomWord = wordsList[randomIdx].split('');// The letters in the generated word is split
+    guess = randomWord.map(ltr => ltr === ' ' ? ' ' : '_'); //Each letter is placed on a underscore space. 
     gameStatus = null;
     render();
 }
 
 function render() {
   renderMessage()
-  imageEl.src = `${IMAGES[wrongGuesses.length]}`; //Each time a wrong guess is made one Reindeer falls off.  This function refers to each image. 
+  imageEl.src = `${IMAGES[wrongGuesses.length]}`; //Pulls a new image everytime a wrong guess is made
   secretEl.textContent = guess.join('')
   renderBtn()
 }
 
-function renderMessage() {
+function renderMessage() { //A message is rendered depending on the game status.
   if (gameStatus === 'W') {
       msgEl.textContent = `Yay, you did it! Santa is on his way back to the North Pole!`;
   } else if (gameStatus === 'L') {
@@ -76,7 +76,7 @@ function renderMessage() {
       msgEl.textContent = `${maxWrong - wrongGuesses.length} Wrong guesses remain, try again!`
   }
 }
-function renderBtn() {
+function renderBtn() { //When a player guesses a letter and clicks on the corresponding button for the letter. 
   letterBtn.forEach(function(btn){
     const ltr = btn.textContent;
     //if wrong guesses includes our letter add class name of wrong
@@ -88,7 +88,7 @@ function renderBtn() {
       btn.className = '';
     }
   })
-  playBtn.style.visibility = gameStatus ? 'visible' : 'hidden';
+  playBtn.style.visibility = gameStatus ? 'visible' : 'hidden'; //The play button is either visible or hidden depending on the game status
 }
 
 function handleChoice(event) { // this function is the letter choice the player picks
