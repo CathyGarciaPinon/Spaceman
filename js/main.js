@@ -112,20 +112,11 @@ function handleChoice(event) { // this function is the letter choice the player 
   render();
 }  
 
-function getGameStatus() {
+function getGameStatus() { //
   if (!guess.includes('_')) return 'W';
-  //if wrong guesses.length is > maxWrongGuesses return 'L'
   if (wrongGuesses.length === maxWrong) return 'L';
   return null;
 }
 
-function renderAudio() {
-  if (audio === 'on') {
-      soundEl.innerHTML = '';
-      music.play();
-  } else if (audio === 'off'){
-      soundEl.innerHTML = '';
-      music.pause();
-  }
-}
+
  
